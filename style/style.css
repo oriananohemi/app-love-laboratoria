@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
@@ -14,23 +15,33 @@ li {
 }
 
 .img {
+    max-height: 100%;
     max-width: 100%;
 }
 
 body {
     color: #373B47;
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     text-align: center;
+    font-weight: 600;
 }
 
 .flex-container {
     align-items: center;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 20px 0;
+    width: 100%;
 }
 
 .header {
-    height: 100px;
+    height: 200px;
 }
 
 .header__brand {
@@ -56,28 +67,91 @@ body {
 }
 
 .hero__title {
-    font-size: 50px;
-    margin: 40px 0;
-}
-
-.hero__subtitle {
     font-size: 30px;
     margin: 40px 0;
 }
 
+.hero__subtitle {
+    font-size: 20px;
+    margin: 40px 0;
+}
+
 .hero__description {
-    font-size: 16px;
+    font-size: 12px;
     margin: 40px 0;
 }
 
 .hero__button {
-    background-color: #2ebf83;
+    background-color: #5dcc71;
     border: none;
     color: white;
     padding: 15px 20px;
 }
 
-.section {
-    background-color: #E95853;
+.section__background {
+    background-color: #ee7b72;
     color: white;
+}
+
+.section__title {
+    font-size: 30px;
+    margin: 20px 0;
+    letter-spacing: 3px;
+}
+
+.section__description {
+    font-size: 20px;
+    margin: 40px auto;
+    width: 80%
+}
+
+.section__card {
+    font-size: 14px;
+    height: 350px;
+    width: 250px;
+    margin: 0 30px;
+}
+
+.section__subtitle {
+    margin: 10px 0;
+}
+
+.section__grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    gap: 20px;
+}
+
+.footer {
+    background-color: #373B47;
+    color: white;
+    padding: 20px 0;
+}
+
+@media (min-width: 700px) {
+    .header {
+        height: 100px;
+    }
+    .flex-container {
+        flex-wrap: nowrap;
+    }
+    .hero__title {
+        font-size: 50px;
+    }
+    .hero__subtitle {
+        font-size: 30px;
+    }
+    .hero__description {
+        font-size: 16px;
+    }
+    .section__grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 60px;
+        font-size: 16px;
+    }
+    .container {
+        width: 75%;
+    }
 }
